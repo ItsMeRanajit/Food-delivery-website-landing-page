@@ -1,0 +1,326 @@
+/* css reset  */
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Phudu", cursive;
+  font-family: "Roboto Slab", serif;
+  font-family: "Young Serif", serif;
+}
+html {
+  scroll-behavior: smooth; /*for smooth scrolling. helps to directly show a certain protion of the page. say if in this website services is clicked then the page will automatically directed to the our services portion. to use it you just have to put the id of the correspondig tag in the navbar item
+  s anchor tag's herf*/
+}
+/* css variables. may not be used */
+:root {
+  --marg: 15px;
+  --pad: 15px;
+  --height: 70px;
+  --width: 800px;
+}
+
+#navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.651);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  /* background: url('../images_food/back-logo.jpg') no-repeat center center/cover ; */
+}
+
+/* navbar css */
+.img1 {
+  margin: 10px 15px;
+  border: 2px;
+  border-radius: 35%;
+  transition: all 0.2s;
+}
+#logo img {
+  width: 105px;
+  height: 66px;
+  filter: invert(100%);
+}
+#navbar ul {
+  display: flex;
+  gap: 1.5rem;
+  /* width: 70vw; */
+}
+#navbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.797);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.2;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+#navbar ul li {
+  list-style: none;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  font-size: 20px;
+  padding: 7px 29px;
+  color: black;
+  border-radius: 20px;
+  transition: all 0.3s;
+  border: 1px solid rgba(244, 109, 109, 0);
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.active {
+  /* background-color:rgb(142, 220, 142); */
+  transform: scale(2);
+  font-weight: bold;
+  transform: translate(0px, -5px);
+  box-shadow: 2px 9px 10px black;
+  border-color: grey;
+}
+
+.img1:hover {
+  box-shadow: 0px 0px 10px rgba(14, 14, 14, 0.885);
+  transform: scale(0.92);
+}
+
+/* Home  */
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  height: 400px;
+  /* margin-top: 10px; */
+}
+
+#home p {
+  width: 50vw;
+  text-align: center;
+}
+
+#home::before {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.166), rgba(255, 255, 255, 1)),
+    url("../images_food/food6-wihte.jpg") no-repeat center center/cover; /* ../ because we have to exit one folder to get the access of the image folder  */
+  /* to give a fading effect.contained bg-image function. and contains various parameters.first the direction. this is to bottom by default but can be set by mentioning by right, by left,by bottom left etc. and it also accepts the degrees for the direction , then  the colors with the percentage or the px value or only using the colors.
+
+   here the white color overlaps the image but for the opacity lower to higher giving us the blur effect.
+   
+   this is a brief idea well learn properly later.*/
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 640px;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.btn {
+  height: 50px;
+  width: 150px;
+  padding: 10px;
+  margin: 40px;
+  border-radius: 80px;
+  background-color: rgba(171, 254, 254, 0.564);
+  transition: all 0.3s;
+  color: black;
+  border-color: black;
+}
+
+.btn:hover {
+  transform: scale(0.92) translate(0, -1px);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.555);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* utility classes . can be added into other classes and te features are added to that class*/
+.h-primary {
+  margin: 20px;
+  margin-top: 140px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.h-primary p {
+  font-family: "Dancing Script", cursive;
+  /* font-family: 'Pacifico', cursive;
+   font-family: 'Phudu', sans-serif;
+   font-family: 'Roboto Slab', serif;
+   font-family: 'Young Serif', serif; */
+  font-size: 4.8rem;
+  font-weight: bold;
+}
+
+/* services */
+.center {
+  margin: 50px 0px;
+  font-size: 2.8rem;
+  text-align: center;
+}
+#services {
+  margin: 60px;
+  display: block;
+}
+#mainservice {
+  /* margin: 0px 40px; */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#mainservice .box {
+  border: 2px solid black;
+  text-align: center;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: rgba(224, 255, 255, 0.534);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.495);
+  transition: all 0.2s;
+  /* flex-grow: 1;
+  flex-shrink: 1; */
+}
+#mainservice :nth-child(1) img {
+  aspect-ratio: 1/1;
+  width: 250px;
+}
+
+#mainservice .box:hover {
+  transform: scale(1.03) translate(0px, -10px);
+  background-color: rgba(195, 254, 254, 0.782);
+  font-weight: bold;
+}
+
+#mainservice .box img {
+  height: 250px;
+  display: block;
+  margin: 5px auto;
+}
+
+#mainservice .box p {
+  margin: 5px;
+}
+
+/* clients */
+#client {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+#client img {
+  aspect-ratio: 1/1;
+  height: 100px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#home2::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(white, rgba(255, 255, 255, 0.363), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.389), white), url("../images_food/bg2.jpeg") no-repeat center center/cover;
+
+  width: 100%;
+  height: 350px;
+  z-index: -2;
+  opacity: 0.4;
+}
+
+/* contact section */
+#contact {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#contact::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.5;
+  background: url("../images_food/contact us.jpg") no-repeat center center/cover;
+  box-shadow: 0px -10px 10px black;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+#form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#form form {
+  width: 20%;
+  font-size: 1.07rem;
+}
+#form form .al {
+  text-align: center;
+}
+
+#form form input,
+textarea {
+  width: 100%;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+#form form input:hover,
+textarea:hover,
+input:focus,
+textarea:focus {
+  transform: scale(1.07);
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.603);
+}
+.foot {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.line {
+  width: 3px;
+  height: 350px;
+  background-color: darkcyan;
+  margin: 0px 10px;
+}
+
+.cont div {
+  color: rgb(8, 114, 114);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+#image {
+  margin: 50px 10px;
+}
+
+.cont #image img {
+  aspect-ratio: 1/1;
+  width: 50px;
+  margin: 15px;
+  transition: all 0.2s;
+  border-radius: 10px;
+}
+#image img:hover {
+  transform: scale(1.2) translate(0px, -3px);
+  box-shadow: 0px 3px 5px black;
+}

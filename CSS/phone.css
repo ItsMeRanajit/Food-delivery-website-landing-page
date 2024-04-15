@@ -1,0 +1,72 @@
+/* navbar */
+#navbar {
+  flex-direction: column;
+}
+
+#navbar ul {
+  gap: 12px;
+  margin: 5px;
+}
+
+#navbar ul li a {
+  font-size: 1rem;
+  padding: 5px 5px;
+}
+
+/* home */
+#home {
+  height: 600px;
+}
+#home ::before {
+  height: 600px;
+}
+.h-primary {
+  font-size: 1.4rem;
+}
+.h-primary p {
+  font-size: 3.2rem;
+}
+/* services */
+
+#mainservice {
+  flex-direction: column;
+}
+#mainservice .box img {
+  height: 135px;
+}
+#mainservice :nth-child(1) img {
+  aspect-ratio: 1/1;
+  width: 135px;
+}
+/* home2 */
+#client {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+/* contact */
+
+#form {
+  flex-direction: column;
+}
+
+#form form {
+  width: 180px;
+  margin: 20px;
+}
+.line {
+  height: 3px;
+  width: 80vw;
+  display: inline;
+  position: relative;
+}
+/* cont */
+.cont div {
+  font-size: 1rem;
+}
+.cont {
+  margin-top: 20px;
+}
+/* footer  */
+footer {
+  font-size: 10px;
+}
